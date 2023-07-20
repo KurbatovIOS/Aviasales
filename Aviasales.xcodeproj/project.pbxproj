@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		B8DBAD5A2A6962F500EE5F6F /* AviasalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */; };
-		B8DBAD5C2A6962F500EE5F6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD5B2A6962F500EE5F6F /* ContentView.swift */; };
+		B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */; };
 		B8DBAD5E2A6962F600EE5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DBAD5D2A6962F600EE5F6F /* Assets.xcassets */; };
 		B8DBAD612A6962F600EE5F6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DBAD602A6962F600EE5F6F /* Preview Assets.xcassets */; };
+		B8DBAD6B2A6965CB00EE5F6F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6A2A6965CB00EE5F6F /* SearchResult.swift */; };
+		B8DBAD6E2A69693B00EE5F6F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6D2A69693B00EE5F6F /* APIService.swift */; };
+		B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */; };
+		B8DBAD732A696F1100EE5F6F /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8DBAD562A6962F500EE5F6F /* Aviasales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviasales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviasalesApp.swift; sourceTree = "<group>"; };
-		B8DBAD5B2A6962F500EE5F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultList.swift; sourceTree = "<group>"; };
 		B8DBAD5D2A6962F600EE5F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8DBAD602A6962F600EE5F6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8DBAD6A2A6965CB00EE5F6F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		B8DBAD6D2A69693B00EE5F6F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */,
-				B8DBAD5B2A6962F500EE5F6F /* ContentView.swift */,
+				B8DBAD672A69644900EE5F6F /* Views */,
+				B8DBAD682A69645600EE5F6F /* ViewModels */,
+				B8DBAD692A69645C00EE5F6F /* Models */,
+				B8DBAD6C2A69692500EE5F6F /* Services */,
 				B8DBAD5D2A6962F600EE5F6F /* Assets.xcassets */,
 				B8DBAD5F2A6962F600EE5F6F /* Preview Content */,
 			);
@@ -65,6 +76,47 @@
 				B8DBAD602A6962F600EE5F6F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8DBAD672A69644900EE5F6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBAD712A696ECF00EE5F6F /* SearchScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8DBAD682A69645600EE5F6F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B8DBAD692A69645C00EE5F6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBAD6A2A6965CB00EE5F6F /* SearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8DBAD6C2A69692500EE5F6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBAD6D2A69693B00EE5F6F /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B8DBAD712A696ECF00EE5F6F /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */,
+				B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */,
+			);
+			path = SearchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8DBAD5C2A6962F500EE5F6F /* ContentView.swift in Sources */,
+				B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */,
+				B8DBAD732A696F1100EE5F6F /* SearchResultView.swift in Sources */,
+				B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */,
+				B8DBAD6B2A6965CB00EE5F6F /* SearchResult.swift in Sources */,
+				B8DBAD6E2A69693B00EE5F6F /* APIService.swift in Sources */,
 				B8DBAD5A2A6962F500EE5F6F /* AviasalesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +331,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +361,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
