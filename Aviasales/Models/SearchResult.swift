@@ -8,27 +8,43 @@
 import Foundation
 
 struct SearchResult: Codable {
-    var passengers_count: Int
-    var origin: City
-    var destination: City
-    var results: [Result]
+    let passengersCount: Int
+    let origin: City
+    let destination: City
+    let results: [Result]
+    
+    enum CodingKeys: String, CodingKey {
+        case passengersCount = "passengers_count"
+        case origin
+        case destination
+        case results
+    }
 }
 
 struct City: Codable {
-    var iata: String
-    var name: String
+    let iata: String
+    let name: String
 }
 
 struct Result: Codable, Identifiable {
-    var id: String
-    var departure_date_time: String
-    var arrival_date_time: String
-    var price: Price
-    var airline: String
-    var available_tickets_count: Int
+    let id: String
+    let departureDateTime: String
+    let arrivalDateTime: String
+    let price: Price
+    let airline: String
+    let availableTicketsCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case departureDateTime = "departure_date_time"
+        case arrivalDateTime = "arrival_date_time"
+        case price
+        case airline
+        case availableTicketsCount = "available_tickets_count"
+    }
 }
 
-struct Price: Codable {
-    var currency: String
-    var value: Int
+struct Price: Codable {    
+    let currency: String
+    let value: Int
 }

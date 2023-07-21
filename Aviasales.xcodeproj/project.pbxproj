@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */; };
+		B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9C2A69C22600E854B4 /* BadgeView.swift */; };
+		B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */; };
+		B8873DCA2A6AA6790047C10C /* FlightInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8873DC92A6AA6790047C10C /* FlightInfoView.swift */; };
+		B8873DCD2A6AAE0B0047C10C /* FormatterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8873DCC2A6AAE0B0047C10C /* FormatterService.swift */; };
 		B8DBAD5A2A6962F500EE5F6F /* AviasalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */; };
 		B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */; };
 		B8DBAD5E2A6962F600EE5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DBAD5D2A6962F600EE5F6F /* Assets.xcassets */; };
@@ -14,10 +19,14 @@
 		B8DBAD6B2A6965CB00EE5F6F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6A2A6965CB00EE5F6F /* SearchResult.swift */; };
 		B8DBAD6E2A69693B00EE5F6F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6D2A69693B00EE5F6F /* APIService.swift */; };
 		B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */; };
-		B8DBAD732A696F1100EE5F6F /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		B87D8C9C2A69C22600E854B4 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
+		B8873DC92A6AA6790047C10C /* FlightInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoView.swift; sourceTree = "<group>"; };
+		B8873DCC2A6AAE0B0047C10C /* FormatterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterService.swift; sourceTree = "<group>"; };
 		B8DBAD562A6962F500EE5F6F /* Aviasales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviasales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviasalesApp.swift; sourceTree = "<group>"; };
 		B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultList.swift; sourceTree = "<group>"; };
@@ -26,7 +35,6 @@
 		B8DBAD6A2A6965CB00EE5F6F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		B8DBAD6D2A69693B00EE5F6F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B87D8C9E2A69C88000E854B4 /* FlightDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */,
+			);
+			path = FlightDetailsScreen;
+			sourceTree = "<group>";
+		};
 		B8DBAD4D2A6962F500EE5F6F = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD712A696ECF00EE5F6F /* SearchScreen */,
+				B87D8C9E2A69C88000E854B4 /* FlightDetailsScreen */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD6D2A69693B00EE5F6F /* APIService.swift */,
+				B8873DCC2A6AAE0B0047C10C /* FormatterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,7 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */,
-				B8DBAD722A696F1100EE5F6F /* SearchResultView.swift */,
+				B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */,
+				B8873DC92A6AA6790047C10C /* FlightInfoView.swift */,
+				B87D8C9C2A69C22600E854B4 /* BadgeView.swift */,
 			);
 			path = SearchScreen;
 			sourceTree = "<group>";
@@ -190,10 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */,
-				B8DBAD732A696F1100EE5F6F /* SearchResultView.swift in Sources */,
+				B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */,
+				B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */,
+				B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */,
 				B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */,
 				B8DBAD6B2A6965CB00EE5F6F /* SearchResult.swift in Sources */,
 				B8DBAD6E2A69693B00EE5F6F /* APIService.swift in Sources */,
+				B8873DCA2A6AA6790047C10C /* FlightInfoView.swift in Sources */,
+				B8873DCD2A6AAE0B0047C10C /* FormatterService.swift in Sources */,
 				B8DBAD5A2A6962F500EE5F6F /* AviasalesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

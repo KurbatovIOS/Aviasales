@@ -11,8 +11,7 @@ import SwiftUI
 struct AviasalesApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchResultList()
-                .environmentObject(SearchViewModel(apiService: APIService()))
+            SearchResultList(model: SearchViewModel(apiService: APIService(), formatterService: FormatterService()))
         }
     }
 }

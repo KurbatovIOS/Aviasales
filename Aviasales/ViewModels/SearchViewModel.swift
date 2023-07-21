@@ -9,25 +9,56 @@ import Foundation
 
 class SearchViewModel: ObservableObject {
     
-    @Published var searchResult: SearchResult?
-    
-    private var apiService: APIService
-    
-    init(apiService: APIService) {
-        self.apiService = apiService
-        fetchFlights()
+    enum State {
+        case unset
+        case loading
+        case error
+        case loaded(SearchResult)
     }
     
-    private func fetchFlights() {
-        self.apiService.fetchFlights(from: CityToFetch.moscow, to: CityToFetch.spb) { result in
+    @Published var state: State = .unset
+    
+    private let apiService: APIService
+    private let formatterService: FormatterService
+    
+    init(apiService: APIService, formatterService: FormatterService) {
+        self.apiService = apiService
+        self.formatterService = formatterService
+    }
+    
+    func fetchFlights() {
+        state = .loading
+        self.apiService.fetchFlights(from: CityToFetch.moscow, to: CityToFetch.spb) { [weak self] result in
             guard let result else {
                 // TODO: Show alert with error
+                DispatchQueue.main.async {
+                    self?.state = .error
+                }
                 return
             }
+            let sortedPrice = result.results.sorted { flight1, flight2 in
+                flight1.price.value < flight2.price.value
+            }
+            let searchResult = SearchResult(passengersCount: result.passengersCount, origin: result.origin, destination: result.destination, results: sortedPrice)
             DispatchQueue.main.async {
-                self.searchResult = result
+                self?.state = .loaded(searchResult)
             }
         }
     }
     
+    func formatTicketCountMessage(ticketCount: Int) -> String {
+        formatterService.formatTicketCountMessage(ticketCount: ticketCount)
+    }
+    
+    func formatFlightDate(date: String) -> String? {
+        formatterService.formatFlightDate(date: date)
+    }
+    
+    func formatTime(date: String) -> String? {
+        formatterService.formatTime(date: date)
+    }
+    
+    func getWeakDay(from date: String) -> String? {
+        formatterService.getWeakDay(from: date)
+    }
 }
