@@ -1,0 +1,16 @@
+{
+  "source": "/Users/artemk/Developer/SwiftUI/Aviasales/Aviasales/Views/SearchScreen/SearchResultList.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%@ — %@"
+      },
+      {
+        "comment": "",
+        "key": "%lld чел"
+      }
+    ]
+  },
+  "version": 1
+}

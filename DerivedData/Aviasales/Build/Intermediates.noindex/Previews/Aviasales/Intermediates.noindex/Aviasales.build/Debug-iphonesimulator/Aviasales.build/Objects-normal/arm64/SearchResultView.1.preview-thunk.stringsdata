@@ -1,0 +1,16 @@
+{
+  "source": "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/Previews/Aviasales/Intermediates.noindex/Aviasales.build/Debug-iphonesimulator/Aviasales.build/Objects-normal/arm64/SearchResultView.1.preview-thunk.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Осталось %lld %@ по этой цене"
+      },
+      {
+        "comment": "",
+        "key": "%lld ₽"
+      }
+    ]
+  },
+  "version": 1
+}

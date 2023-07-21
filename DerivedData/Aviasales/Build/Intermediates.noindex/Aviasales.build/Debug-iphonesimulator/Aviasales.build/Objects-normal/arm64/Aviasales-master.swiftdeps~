@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "6c64976d52090677585c240009761a5fec3f072148e9aba89ddfd4e6a0a02dfa"
+build_start_time: [1689857389, 575485944]
+build_end_time: [1689857389, 589960098]
+inputs:
+  "/Users/artemk/Developer/SwiftUI/Aviasales/Aviasales/AviasalesApp.swift": !private [1689857295, 5281925]
+  "/Users/artemk/Developer/SwiftUI/Aviasales/Aviasales/Views/SearchView.swift": !private [1689857302, 604535579]

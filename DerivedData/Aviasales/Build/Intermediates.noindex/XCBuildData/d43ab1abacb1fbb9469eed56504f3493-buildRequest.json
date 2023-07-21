@@ -1,0 +1,105 @@
+{
+  "_buildCommand2" : {
+    "command" : "preview"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "12c33af60f9c824281d7c5401943d13560e35325e08322b33be7d85b0a7e8817",
+      "parameters" : {
+        "action" : "build",
+        "activeArchitecture" : "arm64",
+        "activeRunDestination" : {
+          "disableOnlyActiveArch" : false,
+          "platform" : "iphonesimulator",
+          "sdk" : "iphonesimulator16.2",
+          "sdkVariant" : "iphonesimulator",
+          "supportedArchitectures" : [
+            "arm64",
+            "x86_64"
+          ],
+          "targetArchitecture" : "arm64"
+        },
+        "arenaInfo" : {
+          "buildIntermediatesPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex",
+          "buildProductsPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Products",
+          "derivedDataPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData",
+          "indexDataStoreFolderPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Index.noindex/DataStore",
+          "indexEnableDataStore" : true,
+          "indexPCHPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Index.noindex/PrecompiledHeaders",
+          "pchPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/PrecompiledHeaders"
+        },
+        "configurationName" : "Debug",
+        "overrides" : {
+          "synthesized" : {
+            "table" : {
+              "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "",
+              "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "",
+              "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone14,7",
+              "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+              "DSTROOT" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/Previews/Aviasales/ReleaseProducts",
+              "ENABLE_ONLY_ACTIVE_RESOURCES" : "NO",
+              "ENABLE_PREVIEWS" : "YES",
+              "OBJROOT" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/Previews/Aviasales/Intermediates.noindex",
+              "SYMROOT" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/Previews/Aviasales/Products",
+              "TARGET_DEVICE_IDENTIFIER" : "AFC4607D-2797-48E3-AA20-DFF58CDD772D",
+              "TARGET_DEVICE_MODEL" : "iPhone14,7",
+              "TARGET_DEVICE_OS_VERSION" : "16.2",
+              "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "containerPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/Aviasales.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator16.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Products",
+      "derivedDataPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/artemk/Developer/SwiftUI/Aviasales/DerivedData/Aviasales/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone14,7",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "16.2",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone14,7",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "TARGET_DEVICE_IDENTIFIER" : "AFC4607D-2797-48E3-AA20-DFF58CDD772D",
+          "TARGET_DEVICE_MODEL" : "iPhone14,7",
+          "TARGET_DEVICE_OS_VERSION" : "16.2",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
