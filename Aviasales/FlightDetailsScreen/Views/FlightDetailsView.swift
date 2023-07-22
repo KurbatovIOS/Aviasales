@@ -57,6 +57,7 @@ struct FlightDetailsView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 8)
             }
+            .padding(.vertical)
         }
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showAlert) {

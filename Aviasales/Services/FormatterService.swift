@@ -50,6 +50,7 @@ class FormatterService {
             return ""
         }
         dateFormatter.dateFormat = "d MMMM"
+        dateFormatter.locale = Locale(identifier: "ru_RU")
         let month = dateFormatter.string(from: rawDate)
         return month + ","
     }
