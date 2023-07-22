@@ -37,7 +37,7 @@ struct SearchResultList: View {
                             LazyVStack {
                                 ForEach(result.results) { flight in
                                     NavigationLink {
-                                        FlightDetailsView()
+                                        FlightDetailsView(model: model, searchResult: result, flightToDisplay: flight)
                                     } label: {
                                         SearchResultView(model: model, searchResult: result, flightToDisplay: flight)
                                             .padding(.bottom, 10)
