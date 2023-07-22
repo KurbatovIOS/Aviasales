@@ -14,11 +14,11 @@ struct FlightDetailsView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    Text("")
-                    Text("")
+                    Text("Цена")
+                    Text("Лучшая цена")
                 }
            
-                Text("")
+                Text("Москва ")
                 
                 Spacer()
                 
