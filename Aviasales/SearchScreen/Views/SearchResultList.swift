@@ -19,7 +19,6 @@ struct SearchResultList: View {
                 ProgressView()
             case .error:
                 ProgressView()
-                
             case .loading:
                 ProgressView()
             case .loaded(let result):
@@ -60,13 +59,6 @@ struct SearchResultList: View {
             UINavigationBar.appearance().standardAppearance = navBarAppearence
             UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearence
         })
-        //            List(model.searchResult?.results ?? []) { flight in
-        //                NavigationLink {
-        //                    Text("\(flight.available_tickets_count)")
-        //                } label: {
-        //                    SearchResultView(flightToDisplay: flight)
-        //                }
-        //            }
     }
 }
 
