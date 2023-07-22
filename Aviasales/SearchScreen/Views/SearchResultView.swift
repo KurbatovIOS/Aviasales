@@ -20,10 +20,15 @@ struct SearchResultView: View {
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .topLeading) {
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
+            
+            if flightToDisplay.isCheapest {
+                BadgeView()
+                    .offset(x: 8, y: -10)
+            }
             
             VStack(alignment: .leading, spacing: 12) {
                 HStack {

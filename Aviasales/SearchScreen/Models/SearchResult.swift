@@ -33,6 +33,7 @@ struct Result: Codable, Identifiable {
     let price: Price
     let airline: String
     let availableTicketsCount: Int
+    var isCheapest: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case id

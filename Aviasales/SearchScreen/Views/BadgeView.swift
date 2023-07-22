@@ -9,14 +9,13 @@ import SwiftUI
 
 struct BadgeView: View {
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 100, style: .circular)
-                .foregroundColor(.green)
-            
-            Text("Самый дешёвый")
-                .foregroundColor(.white)
-                .padding(10)
-        }
+        Text("Самый дешёвый")
+            .foregroundColor(.white)
+            .font(.system(size: 13, weight: .bold))
+            .padding([.top, .bottom], 2)
+            .padding([.leading, .trailing], 8)
+            .background( RoundedRectangle(cornerRadius: 100, style: .circular)
+                .foregroundColor(.green))
     }
 }
 

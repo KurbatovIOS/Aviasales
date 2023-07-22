@@ -36,10 +36,8 @@ struct SearchResultList: View {
                                 }
                             }
                         }
-                        //.background(Color(UIColor.systemGray6))
                         .padding()
                     }
-                    //.background(Color(UIColor.systemGray6))
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .principal) {
@@ -52,7 +50,7 @@ struct SearchResultList: View {
                                     .font(.subheadline)
                             }
                         }
-                }
+                    }
                 }
             }
         }

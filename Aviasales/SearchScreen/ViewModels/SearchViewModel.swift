@@ -36,8 +36,11 @@ class SearchViewModel: ObservableObject {
                 }
                 return
             }
-            let sortedPrice = result.results.sorted { flight1, flight2 in
+            var sortedPrice = result.results.sorted { flight1, flight2 in
                 flight1.price.value < flight2.price.value
+            }
+            if !sortedPrice.isEmpty {
+                sortedPrice[0].isCheapest = true
             }
             let searchResult = SearchResult(passengersCount: result.passengersCount, origin: result.origin, destination: result.destination, results: sortedPrice)
             DispatchQueue.main.async {
