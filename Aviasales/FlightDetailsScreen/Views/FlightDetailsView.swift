@@ -27,7 +27,7 @@ struct FlightDetailsView: View {
                 }
                 .padding()
                 .foregroundColor(.white)
-                .background(Color(UIColor.orange))
+                .background(Color(UIColor.red))
                 .cornerRadius(10)
             }
         }
