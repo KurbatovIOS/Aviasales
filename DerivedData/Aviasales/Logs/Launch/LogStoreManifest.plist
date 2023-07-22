@@ -51,6 +51,186 @@
 			<key>uniqueIdentifier</key>
 			<string>37F4616D-F4BB-4ECA-B772-19E53B1593B7</string>
 		</dict>
+		<key>41CB41FA-DEC1-43E5-ABA4-68BD9BDC35EA</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>D4AEBFFD-425C-464F-B538-1D40D84E2D63</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Aviasales-2023.07.22_11-31-15-+0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Aviasales project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Aviasales</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Aviasales</string>
+			<key>timeStartedRecording</key>
+			<real>711703875.52060401</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Aviasales</string>
+			<key>uniqueIdentifier</key>
+			<string>41CB41FA-DEC1-43E5-ABA4-68BD9BDC35EA</string>
+		</dict>
+		<key>56C6DA98-FD0B-482A-9A45-70E22BD75A82</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>98C32ACD-AB28-42F5-B9A1-E56F211070C9</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Aviasales-2023.07.22_11-34-18-+0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Aviasales project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Aviasales</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Aviasales</string>
+			<key>timeStartedRecording</key>
+			<real>711704058.03039002</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Aviasales</string>
+			<key>uniqueIdentifier</key>
+			<string>56C6DA98-FD0B-482A-9A45-70E22BD75A82</string>
+		</dict>
+		<key>B467B259-2E10-4B3A-9A71-248D443C03B3</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>7900BC50-E81B-489D-A5A7-BFC5F11809AC</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Aviasales-2023.07.22_11-36-49-+0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Aviasales project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Aviasales</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Aviasales</string>
+			<key>timeStartedRecording</key>
+			<real>711704209.01841605</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Aviasales</string>
+			<key>uniqueIdentifier</key>
+			<string>B467B259-2E10-4B3A-9A71-248D443C03B3</string>
+		</dict>
+		<key>D4116363-2268-4C45-B2B0-3B426932C556</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>1353058C-7D09-4509-9C6C-E81EB8E2E40E</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Aviasales-2023.07.22_11-34-37-+0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Aviasales project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Aviasales</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Aviasales</string>
+			<key>timeStartedRecording</key>
+			<real>711704077.32296395</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Aviasales</string>
+			<key>uniqueIdentifier</key>
+			<string>D4116363-2268-4C45-B2B0-3B426932C556</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

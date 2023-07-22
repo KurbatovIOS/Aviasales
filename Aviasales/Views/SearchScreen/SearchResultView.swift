@@ -44,12 +44,12 @@ struct SearchResultView: View {
                 FlightInfoView(cityName: searchResult.origin.name,
                                cityIata: searchResult.origin.iata,
                                time: model.formatTime(date: flightToDisplay.departureDateTime) ?? "",
-                               date: model.formatTime(date: flightToDisplay.departureDateTime) ?? "")
+                               date: model.formatDate(date: flightToDisplay.departureDateTime) ?? "")
                 
                 FlightInfoView(cityName: searchResult.destination.name,
                                cityIata: searchResult.destination.iata,
-                               time: flightToDisplay.arrivalDateTime,
-                               date: flightToDisplay.arrivalDateTime)
+                               time: model.formatTime(date: flightToDisplay.arrivalDateTime) ?? "",
+                               date: model.formatDate(date: flightToDisplay.arrivalDateTime) ?? "")
             }
             .foregroundColor(.black)
             .padding()

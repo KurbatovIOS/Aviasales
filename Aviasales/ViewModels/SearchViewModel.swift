@@ -50,15 +50,11 @@ class SearchViewModel: ObservableObject {
         formatterService.formatTicketCountMessage(ticketCount: ticketCount)
     }
     
-    func formatFlightDate(date: String) -> String? {
+    func formatDate(date: String) -> String? {
         formatterService.formatFlightDate(date: date)
     }
     
     func formatTime(date: String) -> String? {
         formatterService.formatTime(date: date)
-    }
-    
-    func getWeakDay(from date: String) -> String? {
-        formatterService.getWeakDay(from: date)
     }
 }
