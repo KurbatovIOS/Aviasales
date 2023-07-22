@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B84E5F822A6BED6100B955B8 /* LoadingErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */; };
+		B84E5F842A6C14D400B955B8 /* FlightDetailBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */; };
 		B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */; };
 		B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9C2A69C22600E854B4 /* BadgeView.swift */; };
 		B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingErrorView.swift; sourceTree = "<group>"; };
+		B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailBadge.swift; sourceTree = "<group>"; };
 		B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		B87D8C9C2A69C22600E854B4 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */,
+				B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */,
 				B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */,
+				B84E5F842A6C14D400B955B8 /* FlightDetailBadge.swift in Sources */,
 				B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */,
 				B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */,
 				B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */,

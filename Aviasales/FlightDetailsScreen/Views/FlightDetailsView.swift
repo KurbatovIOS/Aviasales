@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FlightDetailsView: View {
     
+    @State private var showAlert = false
+    
     private let model: SearchViewModel
     private let searchResult: SearchResult
     private let flightToDisplay: Result
@@ -25,23 +27,39 @@ struct FlightDetailsView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    Text()
-                    Text("Лучшая цена")
+                    Text("\(flightToDisplay.price.value) ₽")
+                        .font(.system(size: 34, weight: .bold))
+                    
+                    if flightToDisplay.isCheapest {
+                        Text("Лучшая цена за \(searchResult.passengersCount) чел")
+                            .font(.system(size: 13))
+                    }
                 }
-           
-                Text("Москва ")
+                .padding(.bottom, 32)
+                
+                LazyVStack(alignment: .leading) {
+                    Text("\(searchResult.origin.name) — \(searchResult.destination.name)")
+                        .font(.system(size: 17, weight: .bold))
+                    
+                    FlightDetailBadge(model: model, searchResult: searchResult, flightToDisplay: flightToDisplay)
+                }
+                .padding(.horizontal, 16)
                 
                 Spacer()
                 
                 Button("Купить билет") {
-                    print("купил")
+                    showAlert = true
                 }
+                .padding()
                 .foregroundColor(.white)
                 .background(Color(UIColor.orange))
                 .cornerRadius(10)
             }
         }
-        
+        .navigationBarTitleDisplayMode(.inline)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Билет куплен за "), dismissButton: .default(Text("Отлично")))
+        }
     }
 }
 
