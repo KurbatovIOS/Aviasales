@@ -27,13 +27,13 @@ class FormatterService {
     }
     
     func formatFlightDate(date: String) -> String? {
-        guard let rowDate = convertDate(from: date) else {
+        guard let rawDate = convertDate(from: date) else {
             return nil
         }
         dateFormatter.dateFormat = "d MMM"
         dateFormatter.locale = Locale(identifier: "ru_RU")
-        let date = dateFormatter.string(from: rowDate).replacingOccurrences(of: ".", with: ",")
-        let weakDay = getWeakDay(from: rowDate)
+        let date = dateFormatter.string(from: rawDate).replacingOccurrences(of: ".", with: ",")
+        let weakDay = getWeakDay(from: rawDate)
         return "\(date) \(weakDay ?? "")"
     }
     
@@ -46,11 +46,11 @@ class FormatterService {
     }
     
     func getMonth(date: String) -> String? {
-        guard let rowDate = convertDate(from: date) else {
+        guard let rawDate = convertDate(from: date) else {
             return nil
         }
         dateFormatter.dateFormat = "d MMMM"
-        let month = dateFormatter.string(from: rowDate)
+        let month = dateFormatter.string(from: rawDate)
         return month + ","
     }
     
@@ -65,11 +65,11 @@ class FormatterService {
         guard splitted.count == 2 else {
             return nil
         }
-        let rowDateString = splitted[0]
+        let rawDateString = splitted[0]
         dateFormatter.dateFormat = "yy-MM-dd"
-        guard let rowDate = dateFormatter.date(from: rowDateString) else {
+        guard let rawDate = dateFormatter.date(from: rawDateString) else {
             return nil
         }
-        return rowDate
+        return rawDate
     }
 }

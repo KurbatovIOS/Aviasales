@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct LoadingErrorView: View {
+    
+    private let model: SearchViewModel
+    
+    init(model: SearchViewModel) {
+        self.model = model
+    }
+    
     var body: some View {
         ZStack {
             Color(UIColor.systemGray6)
@@ -15,7 +22,7 @@ struct LoadingErrorView: View {
             VStack {
                 Text("Что-то пошло не так")
                 Button {
-                    print("Retry")
+                    model.fetchFlights()
                 } label: {
                     Text("Повторить")
                         .padding(10)
@@ -30,6 +37,6 @@ struct LoadingErrorView: View {
 
 struct LoadingErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingErrorView()
+        LoadingErrorView(model: SearchViewModel(apiService: APIService(), formatterService: FormatterService()))
     }
 }

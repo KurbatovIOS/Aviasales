@@ -32,7 +32,7 @@ struct SearchResultView: View {
             
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Text("\(flightToDisplay.price.value) ₽")
+                    Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency) ?? "")")
                         .font(.system(size: 19, weight: .bold))
                         .foregroundColor(.blue)
                     Spacer()

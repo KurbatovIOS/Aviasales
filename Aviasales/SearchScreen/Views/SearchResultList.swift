@@ -18,7 +18,7 @@ struct SearchResultList: View {
             case .unset:
                 ProgressView()
             case .error:
-                LoadingErrorView()
+                LoadingErrorView(model: model)
             case .loading:
                 ProgressView()
             case .loaded(let result):

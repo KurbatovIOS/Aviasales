@@ -16,6 +16,10 @@ class SearchViewModel: ObservableObject {
         case loaded(SearchResult)
     }
     
+    private let currencyList = [
+        (currencyTitle: "RUB", currencySymbol: "₽"),
+    ]
+    
     @Published var state: State = .unset
     
     private let apiService: APIService
@@ -53,6 +57,16 @@ class SearchViewModel: ObservableObject {
         }
     }
     
+    func getCurrencySymbol(for givenCurrency: String) -> String? {
+        for currency in currencyList {
+            if currency.currencyTitle == givenCurrency {
+                return currency.currencySymbol
+            }
+        }
+        return nil
+    }
+    
+    // -MARK: Formatters
     func formatTicketCountMessage(ticketCount: Int) -> String {
         formatterService.formatTicketCountMessage(ticketCount: ticketCount)
     }

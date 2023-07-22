@@ -27,7 +27,7 @@ struct FlightDetailsView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    Text("\(flightToDisplay.price.value) ₽")
+                    Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency) ?? "")")
                         .font(.system(size: 34, weight: .bold))
                     
                     if flightToDisplay.isCheapest {
@@ -47,18 +47,20 @@ struct FlightDetailsView: View {
                 
                 Spacer()
                 
-                Button("Купить билет") {
+                Button("Купить билет за \(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency) ?? "")") {
                     showAlert = true
                 }
                 .padding()
+                .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .background(Color(UIColor.orange))
                 .cornerRadius(10)
+                .padding(.horizontal, 8)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Билет куплен за "), dismissButton: .default(Text("Отлично")))
+            Alert(title: Text("Билет куплен за \(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency) ?? "")"), dismissButton: .default(Text("Отлично")))
         }
     }
 }
