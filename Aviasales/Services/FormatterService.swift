@@ -30,7 +30,6 @@ class FormatterService {
         guard let rowDate = convertDate(from: date) else {
             return nil
         }
-        
         dateFormatter.dateFormat = "d MMM"
         dateFormatter.locale = Locale(identifier: "ru_RU")
         let date = dateFormatter.string(from: rowDate).replacingOccurrences(of: ".", with: ",")
@@ -46,7 +45,16 @@ class FormatterService {
         return splitted[1]
     }
     
-    func getWeakDay(from date: Date) -> String? {
+    func getMonth(date: String) -> String? {
+        guard let rowDate = convertDate(from: date) else {
+            return nil
+        }
+        dateFormatter.dateFormat = "d MMMM"
+        let month = dateFormatter.string(from: rowDate)
+        return month + ","
+    }
+    
+    private func getWeakDay(from date: Date) -> String? {
         dateFormatter.dateFormat = "eee"
         let weakDay = dateFormatter.string(from: date).lowercased()
         return weakDay

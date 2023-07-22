@@ -39,9 +39,13 @@ class SearchViewModel: ObservableObject {
             var sortedPrice = result.results.sorted { flight1, flight2 in
                 flight1.price.value < flight2.price.value
             }
-            if !sortedPrice.isEmpty {
-                sortedPrice[0].isCheapest = true
+            guard !sortedPrice.isEmpty else {
+                DispatchQueue.main.async {
+                    self?.state = .error
+                }
+                return
             }
+            sortedPrice[0].isCheapest = true
             let searchResult = SearchResult(passengersCount: result.passengersCount, origin: result.origin, destination: result.destination, results: sortedPrice)
             DispatchQueue.main.async {
                 self?.state = .loaded(searchResult)
@@ -59,5 +63,9 @@ class SearchViewModel: ObservableObject {
     
     func formatTime(date: String) -> String? {
         formatterService.formatTime(date: date)
+    }
+    
+    func getMonth(date: String) -> String? {
+        formatterService.getMonth(date: date)
     }
 }
