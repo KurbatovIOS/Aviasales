@@ -26,35 +26,35 @@ class FormatterService {
         return message
     }
     
-    func formatFlightDate(date: String) -> String? {
+    func formatFlightDate(date: String) -> String {
         guard let rawDate = convertDate(from: date) else {
-            return nil
+            return ""
         }
         dateFormatter.dateFormat = "d MMM"
         dateFormatter.locale = Locale(identifier: "ru_RU")
         let date = dateFormatter.string(from: rawDate).replacingOccurrences(of: ".", with: ",")
         let weakDay = getWeakDay(from: rawDate)
-        return "\(date) \(weakDay ?? "")"
+        return "\(date) \(weakDay)"
     }
     
-    func formatTime(date: String) -> String? {
+    func formatTime(date: String) -> String {
         let splitted = date.components(separatedBy: " ")
         guard splitted.count == 2 else {
-            return nil
+            return ""
         }
         return splitted[1]
     }
     
-    func getMonth(date: String) -> String? {
+    func getMonth(date: String) -> String {
         guard let rawDate = convertDate(from: date) else {
-            return nil
+            return ""
         }
         dateFormatter.dateFormat = "d MMMM"
         let month = dateFormatter.string(from: rawDate)
         return month + ","
     }
     
-    private func getWeakDay(from date: Date) -> String? {
+    private func getWeakDay(from date: Date) -> String {
         dateFormatter.dateFormat = "eee"
         let weakDay = dateFormatter.string(from: date).lowercased()
         return weakDay

@@ -22,7 +22,7 @@ struct FlightDetailBadge: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(Color(UIColor.systemBackground))
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 12) {
@@ -37,13 +37,13 @@ struct FlightDetailBadge: View {
                 
                 FlightInfoView(cityName: searchResult.origin.name,
                                cityIata: searchResult.origin.iata,
-                               time: model.formatTime(date: flightToDisplay.departureDateTime) ?? "",
-                               date: model.formatDate(date: flightToDisplay.departureDateTime) ?? "")
+                               time: model.formatTime(date: flightToDisplay.departureDateTime),
+                               date: model.formatDate(date: flightToDisplay.departureDateTime))
                 
                 FlightInfoView(cityName: searchResult.destination.name,
                                cityIata: searchResult.destination.iata,
-                               time: model.formatTime(date: flightToDisplay.arrivalDateTime) ?? "",
-                               date: model.formatDate(date: flightToDisplay.arrivalDateTime) ?? "")
+                               time: model.formatTime(date: flightToDisplay.arrivalDateTime),
+                               date: model.formatDate(date: flightToDisplay.arrivalDateTime))
             }
             .padding(12)
         }

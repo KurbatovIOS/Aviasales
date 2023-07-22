@@ -22,7 +22,7 @@ struct SearchResultView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(Color(UIColor.systemBackground))
                 .cornerRadius(10)
             
             if flightToDisplay.isCheapest {
@@ -32,7 +32,7 @@ struct SearchResultView: View {
             
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency) ?? "")")
+                    Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))")
                         .font(.system(size: 19, weight: .bold))
                         .foregroundColor(.blue)
                     Spacer()
@@ -48,15 +48,15 @@ struct SearchResultView: View {
                 
                 FlightInfoView(cityName: searchResult.origin.name,
                                cityIata: searchResult.origin.iata,
-                               time: model.formatTime(date: flightToDisplay.departureDateTime) ?? "",
-                               date: model.formatDate(date: flightToDisplay.departureDateTime) ?? "")
+                               time: model.formatTime(date: flightToDisplay.departureDateTime),
+                               date: model.formatDate(date: flightToDisplay.departureDateTime))
                 
                 FlightInfoView(cityName: searchResult.destination.name,
                                cityIata: searchResult.destination.iata,
-                               time: model.formatTime(date: flightToDisplay.arrivalDateTime) ?? "",
-                               date: model.formatDate(date: flightToDisplay.arrivalDateTime) ?? "")
+                               time: model.formatTime(date: flightToDisplay.arrivalDateTime),
+                               date: model.formatDate(date: flightToDisplay.arrivalDateTime))
             }
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
             .padding()
         }
     }

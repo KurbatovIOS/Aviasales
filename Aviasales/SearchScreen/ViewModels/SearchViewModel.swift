@@ -57,13 +57,13 @@ class SearchViewModel: ObservableObject {
         }
     }
     
-    func getCurrencySymbol(for givenCurrency: String) -> String? {
+    func getCurrencySymbol(for givenCurrency: String) -> String {
         for currency in currencyList {
             if currency.currencyTitle == givenCurrency {
                 return currency.currencySymbol
             }
         }
-        return nil
+        return ""
     }
     
     // -MARK: Formatters
@@ -71,15 +71,15 @@ class SearchViewModel: ObservableObject {
         formatterService.formatTicketCountMessage(ticketCount: ticketCount)
     }
     
-    func formatDate(date: String) -> String? {
+    func formatDate(date: String) -> String {
         formatterService.formatFlightDate(date: date)
     }
     
-    func formatTime(date: String) -> String? {
+    func formatTime(date: String) -> String {
         formatterService.formatTime(date: date)
     }
     
-    func getMonth(date: String) -> String? {
+    func getMonth(date: String) -> String {
         formatterService.getMonth(date: date)
     }
 }

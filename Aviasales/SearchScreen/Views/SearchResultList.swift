@@ -29,7 +29,7 @@ struct SearchResultList: View {
                         Text("\(result.origin.name) — \(result.destination.name)")
                             .font(.headline)
                         
-                        Text("\(model.getMonth(date: result.results.first?.arrivalDateTime ?? "") ?? "") \(result.passengersCount) чел")
+                        Text("\(model.getMonth(date: result.results.first?.arrivalDateTime ?? "")) \(result.passengersCount) чел")
                             .foregroundColor(.gray)
                             .font(.subheadline)
                         

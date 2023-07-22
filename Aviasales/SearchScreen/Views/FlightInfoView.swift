@@ -21,6 +21,7 @@ struct FlightInfoView: View {
                 Spacer()
                 Text(time)
             }
+            .foregroundColor(Color.primary)
             .font(.system(size: 15, weight: .bold))
             
             HStack {
