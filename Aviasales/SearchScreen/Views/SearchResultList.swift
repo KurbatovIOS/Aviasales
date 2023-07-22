@@ -22,33 +22,37 @@ struct SearchResultList: View {
             case .loading:
                 ProgressView()
             case .loaded(let result):
-                ScrollView {
-                    LazyVStack {
-                        ForEach(result.results) { flight in
-                            NavigationLink {
-                                FlightDetailsView()
-                            } label: {
-                                SearchResultView(model: model, searchResult: result, flightToDisplay: flight)
-                                    .padding(.bottom, 10)
+                ZStack {
+                    Color(UIColor.systemGray6)
+                        .ignoresSafeArea()
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(result.results) { flight in
+                                NavigationLink {
+                                    FlightDetailsView()
+                                } label: {
+                                    SearchResultView(model: model, searchResult: result, flightToDisplay: flight)
+                                        .padding(.bottom, 10)
+                                }
                             }
                         }
+                        //.background(Color(UIColor.systemGray6))
+                        .padding()
                     }
-                    .background(Color(UIColor.systemGray6))
-                    .padding()
-                }
-                .background(Color(UIColor.systemGray6))
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        VStack {
-                            Text("\(result.origin.name) — \(result.destination.name)")
-                                .font(.headline)
-                            
-                            Text("\(result.passengersCount) чел")
-                                .foregroundColor(.gray)
-                                .font(.subheadline)
+                    //.background(Color(UIColor.systemGray6))
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack {
+                                Text("\(result.origin.name) — \(result.destination.name)")
+                                    .font(.headline)
+                                
+                                Text("\(result.passengersCount) чел")
+                                    .foregroundColor(.gray)
+                                    .font(.subheadline)
+                            }
                         }
-                    }
+                }
                 }
             }
         }

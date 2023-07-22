@@ -18,17 +18,18 @@ struct FlightInfoView: View {
         VStack(spacing: 2) {
             HStack {
                 Text(cityName)
-                    .font(.system(size: 15, weight: .bold))
                 Spacer()
                 Text(time)
             }
+            .font(.system(size: 15, weight: .bold))
             
             HStack {
                 Text(cityIata)
-                    .font(.system(size: 13))
                 Spacer()
                 Text(date)
             }
+            .foregroundColor(Color.gray)
+            .font(.system(size: 13))
         }
     }
 }
