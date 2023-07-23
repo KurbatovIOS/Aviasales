@@ -24,10 +24,12 @@ struct SearchResultView: View {
             VStack {
                 Text("\(result.origin.name) — \(result.destination.name)")
                     .font(.headline)
+                    .accessibilityLabel("cityHeadline")
                 
                 Text("\(model.getMonth(date: result.results.first?.arrivalDateTime ?? "")) \(result.passengersCount) чел")
                     .foregroundColor(.gray)
                     .font(.subheadline)
+                    .accessibilityLabel("flightDate")
                 
                 ScrollView {
                     LazyVStack {
@@ -44,6 +46,7 @@ struct SearchResultView: View {
                     .padding(.bottom, 12)
                     .padding(.top, 26)
                 }
+                .accessibilityLabel("searchScroll")
                 .navigationTitle("Все билеты")
                 .navigationBarHidden(true)
             }

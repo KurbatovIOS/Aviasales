@@ -20,6 +20,10 @@ class SearchViewModel: ObservableObject {
         (currencyTitle: "RUB", currencySymbol: "₽"),
     ]
     
+    private let currencyDict: [String:String] = [
+        "RUB": "₽",
+    ]
+    
     @Published var state: State = .unset
     
     private let apiService: APIServiceProtocol
@@ -58,10 +62,8 @@ class SearchViewModel: ObservableObject {
     }
     
     func getCurrencySymbol(for givenCurrency: String) -> String {
-        for currency in currencyList {
-            if currency.currencyTitle == givenCurrency {
-                return currency.currencySymbol
-            }
+        if let currencySymbol = currencyDict[givenCurrency] {
+            return currencySymbol
         }
         return ""
     }

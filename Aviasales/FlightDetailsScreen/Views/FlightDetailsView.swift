@@ -28,6 +28,7 @@ struct FlightDetailsView: View {
             VStack {
                 VStack {
                     Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))")
+                        .accessibilityIdentifier("price")
                         .font(.system(size: 34, weight: .bold))
                     
                     if flightToDisplay.isCheapest {
@@ -39,9 +40,11 @@ struct FlightDetailsView: View {
                 
                 LazyVStack(alignment: .leading) {
                     Text("\(searchResult.origin.name) — \(searchResult.destination.name)")
+                        .accessibilityIdentifier("cities")
                         .font(.system(size: 17, weight: .bold))
                     
                     FlightDetailCell(model: model, searchResult: searchResult, flightToDisplay: flightToDisplay)
+                        .accessibilityIdentifier("flightBadge")
                 }
                 .padding(.horizontal, 16)
                 
@@ -50,6 +53,7 @@ struct FlightDetailsView: View {
                 Button("Купить билет за \(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))") {
                     showAlert = true
                 }
+                .accessibilityIdentifier("buyButton")
                 .padding()
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
