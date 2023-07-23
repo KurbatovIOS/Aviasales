@@ -19,18 +19,31 @@ struct FlightDetailsView: View {
         self.model = model
         self.searchResult = searchResult
         self.flightToDisplay = flightToDisplay
+        
+        // MARK: iOS 14 navigation bar style fix
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithTransparentBackground()
+        coloredAppearance.backgroundColor = .clear
+        coloredAppearance.shadowColor = .clear
+        
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
     }
     
     var body: some View {
         ZStack {
+            // MARK: Background color
             Color(UIColor.systemGray6)
                 .ignoresSafeArea()
             VStack {
                 VStack {
+                    // MARK: Ticket price
                     Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))")
                         .accessibilityIdentifier("price")
                         .font(.system(size: 34, weight: .bold))
                     
+                    // MARK: Information if this is the cheapest option
                     if flightToDisplay.isCheapest {
                         Text("Лучшая цена за \(searchResult.passengersCount) чел")
                             .font(.system(size: 13))
@@ -39,6 +52,7 @@ struct FlightDetailsView: View {
                 .padding(.bottom, 32)
                 
                 LazyVStack(alignment: .leading) {
+                    // MARK: Information about departure and arrival places
                     Text("\(searchResult.origin.name) — \(searchResult.destination.name)")
                         .accessibilityIdentifier("cities")
                         .font(.system(size: 17, weight: .bold))

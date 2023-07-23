@@ -21,10 +21,11 @@ struct SearchResultCell: View {
     
     var body: some View {
         ZStack(alignment: .topLeading) {
+            // MARK: Background
             Rectangle()
                 .foregroundColor(Color(UIColor.systemBackground))
                 .cornerRadius(10)
-            
+            // MARK: Highlight if this is the cheapest flight
             if flightToDisplay.isCheapest {
                 BadgeView()
                     .offset(x: 8, y: -10)
@@ -32,6 +33,7 @@ struct SearchResultCell: View {
             
             VStack(alignment: .leading, spacing: 12) {
                 VStack(alignment: .leading, spacing: 3.5) {
+                    // MARK: Price and airline logo
                     HStack {
                         Text("\(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))")
                             .font(.system(size: 19, weight: .semibold))
@@ -41,12 +43,14 @@ struct SearchResultCell: View {
                             .resizable()
                             .frame(width: 26, height: 26)
                     }
+                    // MARK: Low ticket count warning if needed
                     if flightToDisplay.availableTicketsCount < 10 {
                         Text("Осталось \(flightToDisplay.availableTicketsCount) \(model.formatTicketCountMessage(ticketCount: flightToDisplay.availableTicketsCount)) по этой цене")
                             .foregroundColor(Color(red: 221/255, green: 66/255, blue: 79/255))
                             .font(.system(size: 13))
                     }
                 }
+                // MARK: Information about departure and arrival places
                 FlightInfoView(cityName: searchResult.origin.name,
                                cityIata: searchResult.origin.iata,
                                time: model.formatTime(date: flightToDisplay.departureDateTime),

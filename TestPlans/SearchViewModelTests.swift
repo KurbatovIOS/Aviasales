@@ -35,6 +35,19 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(apiService.invokedFetchFlightsCount, 1)
     }
     
+    func testSortByPrice() {
+        // Arrange
+        let flight1 = Result(id: "1", departureDateTime: "", arrivalDateTime: "", price: Price(currency: "RUB", value: 1000), airline: "", availableTicketsCount: 1)
+        let flight2 = Result(id: "2", departureDateTime: "", arrivalDateTime: "", price: Price(currency: "RUB", value: 10), airline: "", availableTicketsCount: 1)
+        let flight3 = Result(id: "3", departureDateTime: "", arrivalDateTime: "", price: Price(currency: "RUB", value: 100), airline: "", availableTicketsCount: 1)
+        // Act
+        let sorted = viewModel.sortByPrice(flights: [flight1, flight2, flight3])
+        // Assert
+        XCTAssertTrue(sorted[0].id == "2")
+        XCTAssertTrue(sorted[1].id == "3")
+        XCTAssertTrue(sorted[2].id == "1")
+    }
+    
     func testGetCurrencySymbol() {
         // Arrange
         let rightCurrency = "RUB"

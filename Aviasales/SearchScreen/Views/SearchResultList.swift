@@ -17,10 +17,12 @@ struct SearchResultList: View {
             case .unset:
                 ProgressView()
             case .error:
+                // MARK: If failed to load flights, show error view
                 LoadingErrorView(model: model)
             case .loading:
                 ProgressView()
             case .loaded(let result):
+                // MARK: If fligts are loaded, show them
                 SearchResultView(model: model, result: result)
             }
         }

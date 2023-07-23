@@ -32,6 +32,7 @@ class SearchViewModel: ObservableObject {
     
     func fetchFlights() {
         state = .loading
+        // MARK: Try to load flights information
         self.apiService.fetchFlights(from: CityToFetch.moscow, to: CityToFetch.spb) { [weak self] result in
             guard let result, let self else {
                 DispatchQueue.main.async {
@@ -39,6 +40,7 @@ class SearchViewModel: ObservableObject {
                 }
                 return
             }
+            // MARK: Sort flights by ticket price in ascending order
             var sortedPrice = self.sortByPrice(flights: result.results)
             guard !sortedPrice.isEmpty else {
                 DispatchQueue.main.async {
@@ -46,6 +48,7 @@ class SearchViewModel: ObservableObject {
                 }
                 return
             }
+            // MARK: Mark first option as the cheapest
             sortedPrice[0].isCheapest = true
             let searchResult = SearchResult(passengersCount: result.passengersCount, origin: result.origin, destination: result.destination, results: sortedPrice)
             DispatchQueue.main.async {

@@ -21,11 +21,13 @@ struct FlightDetailCell: View {
     
     var body: some View {
         ZStack(alignment: .topLeading) {
+            // MARK: Background
             Rectangle()
                 .foregroundColor(Color(UIColor.systemBackground))
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 0) {
+                // MARK: Airline logo and title
                 HStack(spacing: 12) {
                     Image(flightToDisplay.airline)
                         .resizable()
@@ -35,7 +37,7 @@ struct FlightDetailCell: View {
                         .font(.system(size: 15, weight: .semibold))
                 }
                 .padding([.horizontal, .top], 12)
-                
+                // MARK: Information about departure and arrival places
                 VStack(spacing: 12) {
                     FlightInfoView(cityName: searchResult.origin.name,
                                    cityIata: searchResult.origin.iata,

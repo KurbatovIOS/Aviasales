@@ -19,9 +19,11 @@ struct SearchResultView: View {
     
     var body: some View {
         ZStack {
+            // MARK: Background color
             Color(UIColor.systemGray6)
                 .ignoresSafeArea()
             VStack {
+                // MARK: Header
                 Text("\(result.origin.name) — \(result.destination.name)")
                     .font(.system(size: 15, weight: .semibold))
                     .accessibilityLabel("cityHeadline")
@@ -33,6 +35,7 @@ struct SearchResultView: View {
                 
                 ScrollView {
                     LazyVStack(spacing: 12) {
+                        // MARK: List of available flights
                         ForEach(result.results) { flight in
                             NavigationLink {
                                 FlightDetailsView(model: model, searchResult: result, flightToDisplay: flight)
