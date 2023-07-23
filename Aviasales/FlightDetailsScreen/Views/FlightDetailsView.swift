@@ -79,7 +79,7 @@ struct FlightDetailsView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Билет куплен за \(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))"), dismissButton: .default(Text("Отлично")))
+            Alert(title: Text("Билет куплен за \(flightToDisplay.price.value) \(model.getCurrencySymbol(for: flightToDisplay.price.currency))"), dismissButton: .cancel(Text("Отлично")))
         }
     }
 }
