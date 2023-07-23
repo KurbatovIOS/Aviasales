@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B84E5F822A6BED6100B955B8 /* LoadingErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */; };
-		B84E5F842A6C14D400B955B8 /* FlightDetailBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */; };
-		B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */; };
+		B84E5F842A6C14D400B955B8 /* FlightDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5F832A6C14D400B955B8 /* FlightDetailCell.swift */; };
+		B87A5BC62A6D0E780004F964 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A5BC52A6D0E780004F964 /* SearchResultView.swift */; };
+		B87D8C9B2A699C3300E854B4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9A2A699C3300E854B4 /* SearchResultCell.swift */; };
 		B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9C2A69C22600E854B4 /* BadgeView.swift */; };
 		B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */; };
 		B8873DCA2A6AA6790047C10C /* FlightInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8873DC92A6AA6790047C10C /* FlightInfoView.swift */; };
 		B8873DCD2A6AAE0B0047C10C /* FormatterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8873DCC2A6AAE0B0047C10C /* FormatterService.swift */; };
+		B8C415292A6D229900C864DB /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C415282A6D229900C864DB /* SearchViewModelTests.swift */; };
+		B8C4152C2A6D23CF00C864DB /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C4152B2A6D23CF00C864DB /* APIServiceMock.swift */; };
+		B8C4152E2A6D23DD00C864DB /* FormatterServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C4152D2A6D23DD00C864DB /* FormatterServiceMock.swift */; };
 		B8DBAD5A2A6962F500EE5F6F /* AviasalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */; };
 		B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */; };
 		B8DBAD5E2A6962F600EE5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DBAD5D2A6962F600EE5F6F /* Assets.xcassets */; };
@@ -23,14 +27,31 @@
 		B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBAD6F2A696C5200EE5F6F /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B8C415202A6D21BF00C864DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DBAD4E2A6962F500EE5F6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8DBAD552A6962F500EE5F6F;
+			remoteInfo = Aviasales;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingErrorView.swift; sourceTree = "<group>"; };
-		B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailBadge.swift; sourceTree = "<group>"; };
-		B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		B84E5F832A6C14D400B955B8 /* FlightDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailCell.swift; sourceTree = "<group>"; };
+		B87A5BC52A6D0E780004F964 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		B87D8C9A2A699C3300E854B4 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		B87D8C9C2A69C22600E854B4 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
 		B8873DC92A6AA6790047C10C /* FlightInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoView.swift; sourceTree = "<group>"; };
 		B8873DCC2A6AAE0B0047C10C /* FormatterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterService.swift; sourceTree = "<group>"; };
+		B8C415162A6D1C0200C864DB /* UnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestPlan.xctestplan; sourceTree = "<group>"; };
+		B8C415172A6D1C0C00C864DB /* UITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestPlan.xctestplan; sourceTree = "<group>"; };
+		B8C4151C2A6D21BF00C864DB /* AviasalesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviasalesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C415282A6D229900C864DB /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewModelTests.swift; path = TestPlans/SearchViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		B8C4152B2A6D23CF00C864DB /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIServiceMock.swift; path = TestPlans/APIServiceMock.swift; sourceTree = SOURCE_ROOT; };
+		B8C4152D2A6D23DD00C864DB /* FormatterServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormatterServiceMock.swift; path = TestPlans/FormatterServiceMock.swift; sourceTree = SOURCE_ROOT; };
 		B8DBAD562A6962F500EE5F6F /* Aviasales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviasales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviasalesApp.swift; sourceTree = "<group>"; };
 		B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultList.swift; sourceTree = "<group>"; };
@@ -42,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B8C415192A6D21BF00C864DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8DBAD532A6962F500EE5F6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,8 +83,10 @@
 		B85743EE2A6BBF1D00F6B1F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */,
 				B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */,
-				B87D8C9A2A699C3300E854B4 /* SearchResultView.swift */,
+				B87A5BC52A6D0E780004F964 /* SearchResultView.swift */,
+				B87D8C9A2A699C3300E854B4 /* SearchResultCell.swift */,
 				B8873DC92A6AA6790047C10C /* FlightInfoView.swift */,
 				B87D8C9C2A69C22600E854B4 /* BadgeView.swift */,
 			);
@@ -67,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B87D8C9F2A69C8C700E854B4 /* FlightDetailsView.swift */,
-				B84E5F832A6C14D400B955B8 /* FlightDetailBadge.swift */,
+				B84E5F832A6C14D400B955B8 /* FlightDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,10 +110,55 @@
 			path = FlightDetailsScreen;
 			sourceTree = "<group>";
 		};
+		B8C415152A6D1BE900C864DB /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				B8C415162A6D1C0200C864DB /* UnitTestPlan.xctestplan */,
+				B8C415172A6D1C0C00C864DB /* UITestPlan.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
+		B8C4151D2A6D21BF00C864DB /* AviasalesUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8C4152A2A6D235E00C864DB /* Mocks */,
+				B8C415252A6D225300C864DB /* Modules */,
+			);
+			path = AviasalesUnitTests;
+			sourceTree = "<group>";
+		};
+		B8C415252A6D225300C864DB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B8C415262A6D227200C864DB /* SearchScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B8C415262A6D227200C864DB /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B8C415282A6D229900C864DB /* SearchViewModelTests.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		B8C4152A2A6D235E00C864DB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B8C4152B2A6D23CF00C864DB /* APIServiceMock.swift */,
+				B8C4152D2A6D23DD00C864DB /* FormatterServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B8DBAD4D2A6962F500EE5F6F = {
 			isa = PBXGroup;
 			children = (
 				B8DBAD582A6962F500EE5F6F /* Aviasales */,
+				B8C415152A6D1BE900C864DB /* TestPlans */,
+				B8C4151D2A6D21BF00C864DB /* AviasalesUnitTests */,
 				B8DBAD572A6962F500EE5F6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD562A6962F500EE5F6F /* Aviasales.app */,
+				B8C4151C2A6D21BF00C864DB /* AviasalesUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */,
-				B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */,
 				B8DBAD712A696ECF00EE5F6F /* SearchScreen */,
 				B87D8C9E2A69C88000E854B4 /* FlightDetailsScreen */,
 				B8DBAD6C2A69692500EE5F6F /* Services */,
@@ -156,6 +231,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B8C4151B2A6D21BF00C864DB /* AviasalesUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C415222A6D21BF00C864DB /* Build configuration list for PBXNativeTarget "AviasalesUnitTests" */;
+			buildPhases = (
+				B8C415182A6D21BF00C864DB /* Sources */,
+				B8C415192A6D21BF00C864DB /* Frameworks */,
+				B8C4151A2A6D21BF00C864DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8C415212A6D21BF00C864DB /* PBXTargetDependency */,
+			);
+			name = AviasalesUnitTests;
+			productName = AviasalesUnitTests;
+			productReference = B8C4151C2A6D21BF00C864DB /* AviasalesUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B8DBAD552A6962F500EE5F6F /* Aviasales */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8DBAD642A6962F600EE5F6F /* Build configuration list for PBXNativeTarget "Aviasales" */;
@@ -183,6 +276,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					B8C4151B2A6D21BF00C864DB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B8DBAD552A6962F500EE5F6F;
+					};
 					B8DBAD552A6962F500EE5F6F = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -202,11 +299,19 @@
 			projectRoot = "";
 			targets = (
 				B8DBAD552A6962F500EE5F6F /* Aviasales */,
+				B8C4151B2A6D21BF00C864DB /* AviasalesUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B8C4151A2A6D21BF00C864DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8DBAD542A6962F500EE5F6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,15 +324,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B8C415182A6D21BF00C864DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4152C2A6D23CF00C864DB /* APIServiceMock.swift in Sources */,
+				B8C4152E2A6D23DD00C864DB /* FormatterServiceMock.swift in Sources */,
+				B8C415292A6D229900C864DB /* SearchViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8DBAD522A6962F500EE5F6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87A5BC62A6D0E780004F964 /* SearchResultView.swift in Sources */,
 				B8DBAD5C2A6962F500EE5F6F /* SearchResultList.swift in Sources */,
 				B87D8CA02A69C8C700E854B4 /* FlightDetailsView.swift in Sources */,
-				B84E5F842A6C14D400B955B8 /* FlightDetailBadge.swift in Sources */,
+				B84E5F842A6C14D400B955B8 /* FlightDetailCell.swift in Sources */,
 				B87D8C9D2A69C22600E854B4 /* BadgeView.swift in Sources */,
-				B87D8C9B2A699C3300E854B4 /* SearchResultView.swift in Sources */,
+				B87D8C9B2A699C3300E854B4 /* SearchResultCell.swift in Sources */,
 				B8DBAD702A696C5200EE5F6F /* SearchViewModel.swift in Sources */,
 				B8DBAD6B2A6965CB00EE5F6F /* SearchResult.swift in Sources */,
 				B8DBAD6E2A69693B00EE5F6F /* APIService.swift in Sources */,
@@ -240,7 +356,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B8C415212A6D21BF00C864DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8DBAD552A6962F500EE5F6F /* Aviasales */;
+			targetProxy = B8C415202A6D21BF00C864DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B8C415232A6D21BF00C864DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G77J479352;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artkurbatov.AviasalesUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviasales.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aviasales";
+			};
+			name = Debug;
+		};
+		B8C415242A6D21BF00C864DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G77J479352;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artkurbatov.AviasalesUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviasales.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aviasales";
+			};
+			name = Release;
+		};
 		B8DBAD622A6962F600EE5F6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -291,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -345,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -418,6 +580,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B8C415222A6D21BF00C864DB /* Build configuration list for PBXNativeTarget "AviasalesUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C415232A6D21BF00C864DB /* Debug */,
+				B8C415242A6D21BF00C864DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B8DBAD512A6962F500EE5F6F /* Build configuration list for PBXProject "Aviasales" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

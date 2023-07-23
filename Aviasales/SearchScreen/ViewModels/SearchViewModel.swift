@@ -22,10 +22,10 @@ class SearchViewModel: ObservableObject {
     
     @Published var state: State = .unset
     
-    private let apiService: APIService
-    private let formatterService: FormatterService
+    private let apiService: APIServiceProtocol
+    private let formatterService: FormatterServiceProtocol
     
-    init(apiService: APIService, formatterService: FormatterService) {
+    init(apiService: APIServiceProtocol, formatterService: FormatterServiceProtocol) {
         self.apiService = apiService
         self.formatterService = formatterService
     }

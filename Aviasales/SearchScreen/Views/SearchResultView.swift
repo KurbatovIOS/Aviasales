@@ -56,7 +56,7 @@ struct SearchResultView_Previews: PreviewProvider {
         let model = SearchViewModel(apiService: APIService(), formatterService: FormatterService())
         let result = Result(id: UUID().uuidString, departureDateTime: "20:00", arrivalDateTime: "22:30", price: Price(currency: "RUB", value: 130), airline: "Аэрофлот", availableTicketsCount: 1)
         let searchResult = SearchResult(passengersCount: 1, origin: City(iata: "MOW", name: "Москва"), destination: City(iata: "LED", name: "Санкт-Петербург"), results: [result])
-  
+        
         SearchResultView(model: model, result: searchResult)
     }
 }

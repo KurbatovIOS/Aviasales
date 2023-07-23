@@ -7,7 +7,14 @@
 
 import Foundation
 
-class FormatterService {
+protocol FormatterServiceProtocol {
+    func formatTicketCountMessage(ticketCount: Int) -> String
+    func formatFlightDate(date: String) -> String
+    func formatTime(date: String) -> String
+    func getMonth(date: String) -> String
+}
+
+class FormatterService: FormatterServiceProtocol {
     
     private let dateFormatter = DateFormatter()
     

@@ -41,7 +41,7 @@ struct FlightDetailsView: View {
                     Text("\(searchResult.origin.name) — \(searchResult.destination.name)")
                         .font(.system(size: 17, weight: .bold))
                     
-                    FlightDetailBadge(model: model, searchResult: searchResult, flightToDisplay: flightToDisplay)
+                    FlightDetailCell(model: model, searchResult: searchResult, flightToDisplay: flightToDisplay)
                 }
                 .padding(.horizontal, 16)
                 

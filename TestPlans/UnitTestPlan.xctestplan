@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "A24D4F1E-C50E-4A7A-940C-EC876D3BB53C",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Aviasales.xcodeproj",
+      "identifier" : "B87A5BCA2A6D16E40004F964",
+      "name" : "AviasalesUnitTests"
+    },
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Aviasales.xcodeproj",
+        "identifier" : "B87A5BCA2A6D16E40004F964",
+        "name" : "AviasalesUnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

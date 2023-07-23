@@ -12,7 +12,11 @@ enum CityToFetch: String {
     case spb = "LED"
 }
 
-class APIService {
+protocol APIServiceProtocol {
+    func fetchFlights(from: CityToFetch, to: CityToFetch, complition: @escaping (SearchResult?) -> Void)
+}
+
+class APIService: APIServiceProtocol {
     
     func fetchFlights(from: CityToFetch, to: CityToFetch, complition: @escaping (SearchResult?) -> Void) {
         let urlString = "https://nu.vsepoka.ru/api/search?origin=\(from.rawValue)&destination=\(to.rawValue)"
