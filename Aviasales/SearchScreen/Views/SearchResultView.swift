@@ -23,27 +23,25 @@ struct SearchResultView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("\(result.origin.name) — \(result.destination.name)")
-                    .font(.headline)
+                    .font(.system(size: 15, weight: .semibold))
                     .accessibilityLabel("cityHeadline")
                 
                 Text("\(model.getMonth(date: result.results.first?.arrivalDateTime ?? "")) \(result.passengersCount) чел")
                     .foregroundColor(.gray)
-                    .font(.subheadline)
+                    .font(.system(size: 11))
                     .accessibilityLabel("flightDate")
                 
                 ScrollView {
-                    LazyVStack {
+                    LazyVStack(spacing: 12) {
                         ForEach(result.results) { flight in
                             NavigationLink {
                                 FlightDetailsView(model: model, searchResult: result, flightToDisplay: flight)
                             } label: {
                                 SearchResultCell(model: model, searchResult: result, flightToDisplay: flight)
-                                    .padding(.bottom, 10)
                             }
                         }
                     }
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 12)
                     .padding(.top, 26)
                 }
                 .accessibilityLabel("searchScroll")

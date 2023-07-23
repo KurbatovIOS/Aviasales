@@ -12,8 +12,8 @@ struct BadgeView: View {
         Text("Самый дешёвый")
             .foregroundColor(.white)
             .font(.system(size: 13, weight: .bold))
-            .padding([.top, .bottom], 2)
-            .padding([.leading, .trailing], 8)
+            .padding(.vertical, 2)
+            .padding(.horizontal, 8)
             .background( RoundedRectangle(cornerRadius: 100, style: .circular)
                 .foregroundColor(.green))
     }

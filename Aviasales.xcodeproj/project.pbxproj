@@ -100,7 +100,6 @@
 		B85743EE2A6BBF1D00F6B1F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */,
 				B8DBAD5B2A6962F500EE5F6F /* SearchResultList.swift */,
 				B87A5BC52A6D0E780004F964 /* SearchResultView.swift */,
 				B87D8C9A2A699C3300E854B4 /* SearchResultCell.swift */,
@@ -203,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DBAD592A6962F500EE5F6F /* AviasalesApp.swift */,
+				B8E24FF52A6D732B006392CC /* LoadingErrorScreen */,
 				B8DBAD712A696ECF00EE5F6F /* SearchScreen */,
 				B87D8C9E2A69C88000E854B4 /* FlightDetailsScreen */,
 				B8DBAD6C2A69692500EE5F6F /* Services */,
@@ -253,6 +253,22 @@
 				B8DBAD692A69645C00EE5F6F /* Models */,
 			);
 			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		B8E24FF52A6D732B006392CC /* LoadingErrorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B8E24FF62A6D7338006392CC /* Views */,
+			);
+			path = LoadingErrorScreen;
+			sourceTree = "<group>";
+		};
+		B8E24FF62A6D7338006392CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B84E5F812A6BED6100B955B8 /* LoadingErrorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

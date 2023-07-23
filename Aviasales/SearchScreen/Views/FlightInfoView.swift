@@ -22,7 +22,7 @@ struct FlightInfoView: View {
                 Text(time)
             }
             .foregroundColor(Color.primary)
-            .font(.system(size: 15, weight: .bold))
+            .font(.system(size: 15, weight: .semibold))
             
             HStack {
                 Text(cityIata)

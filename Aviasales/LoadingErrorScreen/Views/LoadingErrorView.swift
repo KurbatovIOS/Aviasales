@@ -21,6 +21,7 @@ struct LoadingErrorView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("Что-то пошло не так")
+                    .font(.system(size: 20, weight: .bold))
                 Button {
                     model.fetchFlights()
                 } label: {

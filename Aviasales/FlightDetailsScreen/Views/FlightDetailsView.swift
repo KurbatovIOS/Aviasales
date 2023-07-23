@@ -57,11 +57,11 @@ struct FlightDetailsView: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
-                .background(Color(UIColor.orange))
+                .background(Color(red: 255/255, green: 111/255, blue: 50/255))
                 .cornerRadius(10)
                 .padding(.horizontal, 8)
             }
-            .padding(.vertical)
+            .padding(.vertical, 20)
         }
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showAlert) {

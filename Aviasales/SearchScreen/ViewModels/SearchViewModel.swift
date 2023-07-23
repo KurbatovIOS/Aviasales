@@ -33,27 +33,30 @@ class SearchViewModel: ObservableObject {
     func fetchFlights() {
         state = .loading
         self.apiService.fetchFlights(from: CityToFetch.moscow, to: CityToFetch.spb) { [weak self] result in
-            guard let result else {
-                // TODO: Show alert with error
+            guard let result, let self else {
                 DispatchQueue.main.async {
                     self?.state = .error
                 }
                 return
             }
-            var sortedPrice = result.results.sorted { flight1, flight2 in
-                flight1.price.value < flight2.price.value
-            }
+            var sortedPrice = self.sortByPrice(flights: result.results)
             guard !sortedPrice.isEmpty else {
                 DispatchQueue.main.async {
-                    self?.state = .error
+                    self.state = .error
                 }
                 return
             }
             sortedPrice[0].isCheapest = true
             let searchResult = SearchResult(passengersCount: result.passengersCount, origin: result.origin, destination: result.destination, results: sortedPrice)
             DispatchQueue.main.async {
-                self?.state = .loaded(searchResult)
+                self.state = .loaded(searchResult)
             }
+        }
+    }
+    
+    func sortByPrice(flights: [Result]) -> [Result] {
+        flights.sorted { flight1, flight2 in
+            flight1.price.value < flight2.price.value
         }
     }
     

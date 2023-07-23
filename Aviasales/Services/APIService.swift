@@ -21,8 +21,7 @@ class APIService: APIServiceProtocol {
     func fetchFlights(from: CityToFetch, to: CityToFetch, complition: @escaping (SearchResult?) -> Void) {
         let urlString = "https://nu.vsepoka.ru/api/search?origin=\(from.rawValue)&destination=\(to.rawValue)"
         guard let url = URL(string: urlString) else {
-            // TODO: Handle error
-            print("Error")
+            print("Unable to create URL from string")
             return
         }
         
@@ -30,14 +29,13 @@ class APIService: APIServiceProtocol {
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
-                // TODO: Handle error
-                print(error)
+                print("URL session error:\n\(String(describing: error))")
                 complition(nil)
                 return
             }
             
             guard let data = data else {
-                // TODO: Handel error
+                print("URL session data error)")
                 complition(nil)
                 return
             }
@@ -47,8 +45,7 @@ class APIService: APIServiceProtocol {
                 complition(decodedData)
             }
             catch {
-                // TODO: Handle error
-                print(error)
+                print("Decoding API data error:\n\(error)")
                 complition(nil)
             }
         }

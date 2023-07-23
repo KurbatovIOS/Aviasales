@@ -39,7 +39,8 @@ class FormatterService: FormatterServiceProtocol {
         }
         dateFormatter.dateFormat = "d MMM"
         dateFormatter.locale = Locale(identifier: "ru_RU")
-        let date = dateFormatter.string(from: rawDate).replacingOccurrences(of: ".", with: ",")
+        var date = dateFormatter.string(from: rawDate)
+        date = String(date.dropLast(2)) + ","
         let weakDay = getWeakDay(from: rawDate)
         return "\(date) \(weakDay)"
     }

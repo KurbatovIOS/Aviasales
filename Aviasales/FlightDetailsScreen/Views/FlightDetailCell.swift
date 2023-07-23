@@ -25,7 +25,7 @@ struct FlightDetailCell: View {
                 .foregroundColor(Color(UIColor.systemBackground))
                 .cornerRadius(10)
             
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 0) {
                 HStack(spacing: 12) {
                     Image(flightToDisplay.airline)
                         .resizable()
@@ -34,18 +34,21 @@ struct FlightDetailCell: View {
                     Text(flightToDisplay.airline)
                         .font(.system(size: 15, weight: .semibold))
                 }
+                .padding([.horizontal, .top], 12)
                 
-                FlightInfoView(cityName: searchResult.origin.name,
-                               cityIata: searchResult.origin.iata,
-                               time: model.formatTime(date: flightToDisplay.departureDateTime),
-                               date: model.formatDate(date: flightToDisplay.departureDateTime))
-                
-                FlightInfoView(cityName: searchResult.destination.name,
-                               cityIata: searchResult.destination.iata,
-                               time: model.formatTime(date: flightToDisplay.arrivalDateTime),
-                               date: model.formatDate(date: flightToDisplay.arrivalDateTime))
+                VStack(spacing: 12) {
+                    FlightInfoView(cityName: searchResult.origin.name,
+                                   cityIata: searchResult.origin.iata,
+                                   time: model.formatTime(date: flightToDisplay.departureDateTime),
+                                   date: model.formatDate(date: flightToDisplay.departureDateTime))
+                    
+                    FlightInfoView(cityName: searchResult.destination.name,
+                                   cityIata: searchResult.destination.iata,
+                                   time: model.formatTime(date: flightToDisplay.arrivalDateTime),
+                                   date: model.formatDate(date: flightToDisplay.arrivalDateTime))
+                }
+                .padding(16)
             }
-            .padding(12)
         }
     }
 }
