@@ -66,7 +66,7 @@ class SearchViewModel: ObservableObject {
         return ""
     }
     
-    // -MARK: Formatters
+    // MARK: Formatters
     func formatTicketCountMessage(ticketCount: Int) -> String {
         formatterService.formatTicketCountMessage(ticketCount: ticketCount)
     }
