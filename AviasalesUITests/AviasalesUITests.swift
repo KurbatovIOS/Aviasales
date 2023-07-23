@@ -11,6 +11,7 @@ final class AviasalesUITests: XCTestCase {
     
     private var app: XCUIApplication!
     
+    // Arrange
     override func setUp() {
         super.setUp()
         app = XCUIApplication()
@@ -24,14 +25,16 @@ final class AviasalesUITests: XCTestCase {
     }
     
     func testSearchScreenElementsExistence() {
+        // Assert
         XCTAssertTrue(app.staticTexts["cityHeadline"].exists)
         XCTAssertTrue(app.staticTexts["flightDate"].exists)
         XCTAssertTrue(app.scrollViews["searchScroll"].exists)
     }
     
     func testFlightDetailsElementsExistence() {
+        // Act
         app.scrollViews["searchScroll"].otherElements.firstMatch.tap()
-        
+        // Assert
         XCTAssertTrue(app.staticTexts["price"].exists)
         XCTAssertTrue(app.staticTexts["cities"].exists)
         XCTAssertTrue(app.staticTexts["flightBadge"].exists)

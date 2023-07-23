@@ -30,19 +30,30 @@ final class SearchViewModelTests: XCTestCase {
     func testFetchFlights() throws {
         // Act
         viewModel.fetchFlights()
-        
         // Assert
         XCTAssertTrue(apiService.invokedFetchFlights)
         XCTAssertEqual(apiService.invokedFetchFlightsCount, 1)
     }
     
+    func testGetCurrencySymbol() {
+        // Arrange
+        let rightCurrency = "RUB"
+        let expectedRightResult = "₽"
+        let wrongCurrency = "RU"
+        let expectedWrongResult = ""
+        // Act
+        let rightResult = viewModel.getCurrencySymbol(for: rightCurrency)
+        let wrongResult = viewModel.getCurrencySymbol(for: wrongCurrency)
+        // Assert
+        XCTAssertEqual(rightResult, expectedRightResult)
+        XCTAssertEqual(wrongResult, expectedWrongResult)
+    }
+    
     func testFormatTicketCountMessage() {
         // Arrange
         let ticketCount = 1
-        
         // Act
         _ = viewModel.formatTicketCountMessage(ticketCount: ticketCount)
-        
         // Assert
         XCTAssertTrue(formatterService.invokedFormatTicketCountMessage)
         XCTAssertEqual(formatterService.invokedFormatTicketCountMessageCount, 1)
@@ -52,10 +63,8 @@ final class SearchViewModelTests: XCTestCase {
     func testFormatFlightDate() {
         // Arrange
         let date = "2023-09-03 17:55"
-        
         // Act
         _ = viewModel.formatDate(date: date)
-        
         // Assert
         XCTAssertTrue(formatterService.invokedFormatFlightDate)
         XCTAssertEqual(formatterService.invokedFormatFlightDateCount, 1)
@@ -65,10 +74,8 @@ final class SearchViewModelTests: XCTestCase {
     func testFormatTime() {
         // Arrange
         let date = "2023-09-03 17:55"
-        
         // Act
         _ = viewModel.formatTime(date: date)
-        
         // Assert
         XCTAssertTrue(formatterService.invokedFormatTime)
         XCTAssertEqual(formatterService.invokedFormatTimeCount, 1)
@@ -78,10 +85,8 @@ final class SearchViewModelTests: XCTestCase {
     func testGetMonth() {
         // Arrange
         let date = "2023-09-03 17:55"
-        
         // Act
         _ = viewModel.getMonth(date: date)
-        
         // Assert
         XCTAssertTrue(formatterService.invokedGetMonth)
         XCTAssertEqual(formatterService.invokedGetMonthCount, 1)

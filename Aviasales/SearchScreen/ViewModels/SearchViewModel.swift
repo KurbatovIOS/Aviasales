@@ -16,11 +16,7 @@ class SearchViewModel: ObservableObject {
         case loaded(SearchResult)
     }
     
-    private let currencyList = [
-        (currencyTitle: "RUB", currencySymbol: "₽"),
-    ]
-    
-    private let currencyDict: [String:String] = [
+    private let currencyList: [String:String] = [
         "RUB": "₽",
     ]
     
@@ -62,7 +58,7 @@ class SearchViewModel: ObservableObject {
     }
     
     func getCurrencySymbol(for givenCurrency: String) -> String {
-        if let currencySymbol = currencyDict[givenCurrency] {
+        if let currencySymbol = currencyList[givenCurrency] {
             return currencySymbol
         }
         return ""
