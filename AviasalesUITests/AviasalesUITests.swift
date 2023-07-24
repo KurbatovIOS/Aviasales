@@ -33,6 +33,7 @@ final class AviasalesUITests: XCTestCase {
     
     func testFlightDetailsElementsExistence() {
         // Act
+        _ =  app.scrollViews["searchScroll"].waitForExistence(timeout: 2)
         app.scrollViews["searchScroll"].otherElements.firstMatch.tap()
         // Assert
         XCTAssertTrue(app.staticTexts["price"].exists)
