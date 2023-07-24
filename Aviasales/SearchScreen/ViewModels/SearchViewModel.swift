@@ -15,12 +15,12 @@ class SearchViewModel: ObservableObject {
         case error
         case loaded(SearchResult)
     }
+        
+    @Published var state: State = .unset
     
     private let currencyList: [String:String] = [
         "RUB": "₽",
     ]
-    
-    @Published var state: State = .unset
     
     private let apiService: APIServiceProtocol
     private let formatterService: FormatterServiceProtocol
